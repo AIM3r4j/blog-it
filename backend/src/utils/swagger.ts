@@ -10,7 +10,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: '//localhost:3000/api',
+                url: `//${process.env.HOSTED_URL}/api`,
             },
         ],
         schemes: ['http'],

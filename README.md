@@ -4,7 +4,7 @@ This is a RESTful API for managing articles and user registration in a blog appl
 
 # Documentation
 
-The API documentation can be found at https://blog-it.render.com/api-docs. The documentation contains detailed information on the different endpoints, request parameters, and response formats.
+The API documentation can be found at https://blog-it.onrender.com/api-docs. The documentation contains detailed information on the different endpoints, request parameters, and response formats.
 
 # Getting Started
 
@@ -38,7 +38,7 @@ The app will now be running on localhost:3000.
 
 # Hosting
 
-The API is also hosted on https://blog-it.render.com. You can access the documentation for the API at blog-it.render.com/api-docs.
+The API is also hosted on https://blog-it.onrender.com. You can access the documentation for the API at blog-it.render.com/api-docs.
 
 ## Endpoints
 
