@@ -1,0 +1,41 @@
+### Get all articles with pagination
+GET http://localhost:3000/api/articles/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+### Get specific article
+GET http://localhost:3000/api/articles/rea61qair
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+### Search based on category or tags
+GET http://localhost:3000/api/articles/search?query=Generic
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+### create new article
+POST http://localhost:3000/api/articles/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+Content-Type: application/json
+
+{
+    "title": "A New Blog",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas. Amet justo donec enim diam vulputate ut. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Interdum varius sit amet mattis vulputate enim nulla.",
+    "category": ["Generic"],
+    "tags": ["random"]
+
+}
+### Like an article
+PUT http://localhost:3000/api/articles/rea61qair/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+### Dislike an article
+PUT http://localhost:3000/api/articles/rea61qair/dislike
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+### Comment on an article
+PUT http://localhost:3000/api/articles/rea61qair/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+Content-Type: application/json
+
+{
+    "comment": "A random comment"
+
+}

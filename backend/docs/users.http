@@ -1,0 +1,33 @@
+### Register User
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "name": "test user 1",
+    "email": "test@gmail.com",
+    "password": "testuser1"
+}
+
+### Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "testuser1"
+}
+
+### Fetch User Profile
+GET http://localhost:3000/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+
+
+
+### Update User Profile
+POST http://localhost:3000/api/users/profile/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg2ZDRhN2E3NzgzZGMzOGQ5OGZkZSIsImlhdCI6MTY4MTQyMDI3MSwiZXhwIjoxNjgxNTA2NjcxfQ.B4FgGs4R0VO_cM7YvRzTJeX9f_RF8vF2TANIjoxiQ5o
+Content-Type: application/json
+
+{
+    "name": "test user 1.1"
+}
