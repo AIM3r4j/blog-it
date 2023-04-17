@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
 import { createClient } from 'redis';
-import { promisify } from 'util';
 
 const redisClient = createClient({
     url: 'redis://localhost:6379',
@@ -12,13 +11,12 @@ const redisClient = createClient({
     },
 });
 
-// Promisify Redis commands for easier async/await handling
-// const getAsync = promisify(redisClient.get).bind(redisClient);
-// const setexAsync = promisify(redisClient.setex).bind(redisClient);
-
-redisClient.on('error', (err: Error) => {
-    console.error('Redis error:', err);
-});
+(async () => {
+    await redisClient.connect();
+    redisClient.on('error', (err: Error) => {
+        console.error('Redis error:', err);
+    });
+})();
 
 const CACHE_PREFIX = 'myapp:';
 
